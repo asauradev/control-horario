@@ -1,4 +1,6 @@
-const API_URL = "http://localhost:3000"; // URL del backend
+//const API_URL = "http://localhost:3000"; // URL del backend
+const API_URL = "https://control-horario-backend.onrender.com"; // ✅ tu backend en producción
+
 
 export const login = async (email: string, password: string) => {
   const response = await fetch(`${API_URL}/auth/login`, {
