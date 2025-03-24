@@ -7,19 +7,23 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
+    "lib": ["es2017"],
+    "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": ".",
     "baseUrl": "./",
     "paths": {
       "src/*": ["src/*"]
     },
     "incremental": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }
