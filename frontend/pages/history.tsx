@@ -3,8 +3,18 @@ import { getHistory } from "../services/authService";
 import { AuthContext } from "../context/AuthContext";
 import { useRouter } from "next/router";
 
+interface WorkLog {
+  id: string;
+  startTime: string;
+  endTime?: string;
+  breaks: number;
+  breakTime: number;
+  workDuration: number;
+}
+
 const HistoryPage = () => {
-  const [history, setHistory] = useState([]);
+  //const [history, setHistory] = useState([]);
+  const [history, setHistory] = useState<WorkLog[]>([]);
   const authContext = useContext(AuthContext);
   const router = useRouter();
 
