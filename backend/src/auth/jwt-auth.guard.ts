@@ -1,5 +1,6 @@
 import { Injectable, CanActivate, ExecutionContext, UnauthorizedException, Inject } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
+import { AuthGuard } from '@nestjs/passport';
 import { Request } from "express";
 
 @Injectable()
